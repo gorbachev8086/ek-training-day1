@@ -20,3 +20,8 @@ GitHub 저장소의 Settings → Pages → Deploy from a branch → main → /(r
 이 폴더에서 Python이 설치된 PC는 `python -m http.server 8000`을 실행하고 `http://localhost:8000/`을 엽니다. JSON을 읽는 웹 페이지이므로 HTML만 더블클릭하는 방식은 지원하지 않습니다.
 
 교육 내용과 이미지의 출처 및 저작권은 해당 권리자에게 있습니다.
+
+
+## Day 2 별첨 교재
+
+[Day 2 교재 선택](https://gorbachev8086.github.io/ek-training-day1/day2/)에서 실습 교재 v2.4(50쪽)와 활용 사례 교재 v1.1(14쪽)을 각각 읽을 수 있습니다. 두 교재는 독립적인 별첨으로 유지합니다.

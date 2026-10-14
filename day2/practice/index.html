@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FE5A10">
+  <meta name="description" content="Enterprise Knowledge Day 2 교육 자료. 목차와 검색으로 필요한 내용을 찾고, 원본 슬라이드와 텍스트를 함께 읽어보세요.">
+  <title>실습 교재 · Enterprise Knowledge Day 2</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로 가기</a>
+  <header class="topbar">
+    <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="교육 목차 열기">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <a class="brand" href="../" aria-label="Day 2 교육 자료 목록"><span class="brand-symbol" aria-hidden="true">EK<span>·</span></span><span class="brand-name">Enterprise Knowledge<small>교육 자료</small></span></a>
+    <span class="day-pill">DAY 2</span>
+    <nav class="course-switcher" aria-label="교육 자료 이동"><a href="../">Day 2 목록</a><a href="../../">Day 1</a></nav>
+    <form class="search" role="search" id="search-form">
+      <label class="sr-only" for="search-input">교육 내용 검색</label>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      <input id="search-input" type="search" placeholder="교육 내용 검색" autocomplete="off" spellcheck="false" aria-controls="course-nav" aria-describedby="search-status">
+      <button id="search-results-button" class="search-results-button" type="button" hidden>결과 보기</button>
+      <kbd aria-hidden="true">Ctrl K</kbd>
+    </form>
+  </header>
+
+  <div class="app-layout">
+    <button class="nav-backdrop" id="nav-backdrop" type="button" tabindex="-1" aria-label="목차 닫기" hidden></button>
+    <aside class="sidebar" id="sidebar" aria-label="교육 목차">
+      <div class="sidebar-heading"><div><p class="eyebrow">LEARNING GUIDE</p><h2>실습 교재</h2></div><button class="icon-button mobile-close" id="menu-close" type="button" aria-label="교육 목차 닫기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+      <p class="search-status" id="search-status" role="status" aria-live="polite">자료를 불러오고 있습니다.</p>
+      <nav id="course-nav" aria-label="모듈별 슬라이드"></nav>
+      <div class="sidebar-footer"><span class="status-dot" aria-hidden="true"></span><span id="document-version">Day 2 · 웹 교육 자료</span><p>목차를 선택하거나 검색해 보세요.<br>← → 키로 앞뒤 페이지를 이동합니다.</p></div>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <section class="loading-panel" id="loading-panel" aria-live="polite"><span class="loading-spinner" aria-hidden="true"></span><h1>교육 자료를 불러오는 중입니다</h1><p>잠시만 기다려 주세요.</p></section>
+      <section class="error-panel" id="error-panel" hidden><p class="eyebrow">자료를 열 수 없습니다</p><h1>교육 자료를 다시 불러와 주세요</h1><p id="error-message"></p><button class="button primary" id="retry-button" type="button">다시 불러오기</button></section>
+      <article id="reader" hidden>
+        <div class="reader-heading">
+          <div class="breadcrumb"><a href="../">Day 2</a><span aria-hidden="true">/</span><span id="module-label"></span></div>
+          <div class="title-row"><h1 id="slide-title"></h1><span class="source-page" id="source-page"></span></div>
+          <div class="reader-meta"><p id="position-label"></p><p id="shortcuts-hint">슬라이드 아래에서 텍스트로도 읽을 수 있습니다.</p></div>
+        </div>
+
+        <section class="slide-card" aria-label="교재 슬라이드">
+          <div class="slide-toolbar"><span><span class="tiny-square" aria-hidden="true"></span>교재 슬라이드</span><div><button class="text-button" id="copy-link" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 13 4-4M8 15l-2 2a4 4 0 0 1-6-6l4-4M16 9l2-2a4 4 0 0 1 6 6l-4 4" transform="translate(1 0) scale(.9)"/></svg><span>링크 복사</span></button><button class="text-button" id="expand-slide" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></svg><span>크게 보기</span></button></div></div>
+          <div class="slide-image-wrap"><img id="slide-image" alt="" width="1600" height="900" decoding="async"><p id="image-error" class="image-error" hidden>슬라이드 이미지를 불러오지 못했습니다. 아래의 텍스트 내용을 확인하거나 페이지를 새로고침해 주세요.</p></div>
+          <p class="public-mask-note" id="public-mask-note" hidden>공개용으로 일부 정보가 가려져 있습니다.</p>
+        </section>
+
+        <div class="page-navigation" aria-label="슬라이드 이동"><button class="button" id="previous-slide" type="button"><span aria-hidden="true">←</span><span>이전</span></button><span class="page-navigation-count" id="navigation-count"></span><button class="button" id="next-slide" type="button"><span>다음</span><span aria-hidden="true">→</span></button></div>
+
+        <details class="transcript" id="transcript"><summary><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14M5 10h14M5 15h14M5 20h9"/></svg>텍스트로 읽기</span><span class="details-label">펼치기</span></summary><div class="transcript-inner"><p class="transcript-note">슬라이드의 텍스트와 표입니다. 화면 배치와 실습 화면은 위의 슬라이드를 함께 참고해 주세요.</p><div id="slide-text"></div><div id="slide-tables"></div><div id="slide-links"></div></div></details>
+
+        <footer class="reader-footer"><span>Enterprise Knowledge · Day 2 · 실습 교재</span><span id="document-updated"></span></footer>
+      </article>
+    </main>
+  </div>
+
+  <dialog class="image-dialog" id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><h2 id="dialog-title">슬라이드 크게 보기</h2><button class="button" id="close-dialog" type="button">닫기 <span aria-hidden="true">×</span></button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div><p>작은 화면에서는 이미지를 가로로 이동해 읽을 수 있습니다. Esc 키로 닫을 수 있습니다.</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><div class="noscript-message">이 교육 자료는 목차와 검색 기능에 JavaScript를 사용합니다. 브라우저 설정에서 JavaScript를 허용한 후 다시 열어 주세요.</div></noscript>
+</body>
+</html>
