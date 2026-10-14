@@ -25,3 +25,14 @@ GitHub 저장소의 Settings → Pages → Deploy from a branch → main → /(r
 ## Day 2 별첨 교재
 
 [Day 2 교재 선택](https://gorbachev8086.github.io/ek-training-day1/day2/)에서 실습 교재 v2.4(50쪽)와 활용 사례 교재 v1.1(14쪽)을 각각 읽을 수 있습니다. 두 교재는 독립적인 별첨으로 유지합니다.
+
+## Day 3 실습 교재
+
+[Day 3 실습 교재](https://gorbachev8086.github.io/ek-training-day1/day3/)에서 실습 교재 v1.0(71쪽)을 읽을 수 있습니다. 원본 슬라이드와 검색 가능한 텍스트·표를 함께 제공합니다.
+
+- 멀티 에이전트, RPA 연동, API 허브, 분기·반복, 논문 RAG 실습
+- 원본 슬라이드 번호로 직접 이동: `day3/#slide-16`
+- 원본 PPT·발표자 노트·연결 비밀값은 웹 배포 패키지에 포함하지 않습니다.
+- 실제 EK/DS On-Prem 실습 검증과 웹 자료 변환·게시 검증은 구분합니다.
+
+Day 3 자료 기준은 2026-10-15입니다. 기존 Day 1과 Day 2 교재는 독립적으로 유지합니다.
