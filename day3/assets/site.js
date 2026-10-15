@@ -225,6 +225,27 @@
     }
   }
 
+  // Local research samples supplied for the Day 3 paper exercise.
+  const paperDownloads = [{"slide": 60, "topic": "웨이퍼 맵 결함 분류", "filename": "sensors-23-01926-v3.pdf", "size": "0.87 MB"}, {"slide": 60, "topic": "수율 · 불량 예측 (SECOM)", "filename": "sensors-24-05461.pdf", "size": "2.31 MB"}, {"slide": 60, "topic": "HBM · 하이브리드 본딩 열 문제", "filename": "electronics-14-02682-v2.pdf", "size": "5.41 MB"}, {"slide": 61, "topic": "가상 계측 (VM)", "filename": "Virtual_Metrology_in_Semiconductor_Fabrication_Foundry_Using_Deep_Learning_Neural_Networks.pdf", "size": "1.48 MB"}, {"slide": 61, "topic": "공정 이상 감지 (FDC)", "filename": "sensors-23-09099-v2.pdf", "size": "0.97 MB"}];
+
+  function renderPaperResources(slide) {
+    const section = $('paper-resources');
+    section.hidden = slide.number < 58 || slide.number > 69;
+    const links = $('paper-resource-links');
+    links.replaceChildren();
+    if (section.hidden) return;
+    $('paper-resources-description').textContent = slide.number === 63
+      ? 'PDF를 내려받은 뒤 Knowledge Base의 File Upload에서 선택하세요.'
+      : '교재에 소개된 논문 PDF 5편을 내려받을 수 있습니다.';
+    for (const paper of paperDownloads.filter((item) => item.slide === slide.number)) {
+      const anchor = node('a', 'paper-download-button');
+      anchor.href = `papers/${paper.filename}`;
+      anchor.download = paper.filename;
+      anchor.append(node('span', '', paper.topic), node('span', 'paper-download-size', `PDF ↓ · ${paper.size}`));
+      links.append(anchor);
+    }
+  }
+
   function renderSlide(slide) {
     state.current = slide;
     const index = state.slides.indexOf(slide);
@@ -250,7 +271,7 @@
     if (!imagePath) handleImageError();
     document.title = `${slide.title} · Enterprise Knowledge Day 3`;
     if (state.query) elements.transcript.open = true;
-    renderTranscript(); renderNavigation();
+    renderTranscript(); renderNavigation(); renderPaperResources(slide);
     if (!state.query) requestAnimationFrame(() => {
       const currentLink = elements.nav.querySelector('[aria-current="page"]');
       if (!currentLink) return;

@@ -24,6 +24,7 @@
       <button id="search-results-button" class="search-results-button" type="button" hidden>결과 보기</button>
       <kbd aria-hidden="true">Ctrl K</kbd>
     </form>
+    <a class="downloads-link" href="downloads/">논문 PDF <span aria-hidden="true">↓</span></a>
   </header>
 
   <div class="app-layout">
@@ -51,11 +52,16 @@
           <p class="public-mask-note" id="public-mask-note" hidden>공개용으로 일부 정보가 가려져 있습니다.</p>
         </section>
 
+        <section class="paper-resources" id="paper-resources" aria-labelledby="paper-resources-title" hidden>
+          <div class="paper-resources-heading"><div><h2 id="paper-resources-title">논문 실습 자료</h2><p id="paper-resources-description">교재에 소개된 논문 PDF 5편을 내려받을 수 있습니다.</p></div><a class="button" href="downloads/">논문 PDF 5편 보기 <span aria-hidden="true">→</span></a></div>
+          <div class="paper-resource-links" id="paper-resource-links"></div>
+        </section>
+
         <div class="page-navigation" aria-label="슬라이드 이동"><button class="button" id="previous-slide" type="button"><span aria-hidden="true">←</span><span>이전</span></button><span class="page-navigation-count" id="navigation-count"></span><button class="button" id="next-slide" type="button"><span>다음</span><span aria-hidden="true">→</span></button></div>
 
         <details class="transcript" id="transcript"><summary><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14M5 10h14M5 15h14M5 20h9"/></svg>텍스트로 읽기</span><span class="details-label">펼치기</span></summary><div class="transcript-inner"><p class="transcript-note">슬라이드의 텍스트와 표입니다. 화면 배치와 실습 화면은 위의 슬라이드를 함께 참고해 주세요. 스크린샷 속 글자는 슬라이드 이미지에서 확인할 수 있습니다.</p><div id="slide-text"></div><div id="slide-tables"></div><div id="slide-links"></div></div></details>
 
-        <footer class="reader-footer"><span>Enterprise Knowledge · Day 3</span><span id="document-updated"></span></footer>
+        <footer class="reader-footer"><span>Enterprise Knowledge · Day 3</span><a class="footer-downloads-link" href="downloads/">논문 PDF 다운로드</a><span id="document-updated"></span></footer>
       </article>
     </main>
   </div>
