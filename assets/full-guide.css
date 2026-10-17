@@ -1,0 +1,15 @@
+.guide-download-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1340px;margin:0 auto 24px;padding:16px 19px;border:1px solid #ead8c9;border-radius:9px;background:#fffaf6}
+.guide-download-copy{min-width:0;color:#52463c;line-height:1.6}
+.guide-download-copy strong{display:block;font-size:12px;font-weight:700;word-break:keep-all;overflow-wrap:anywhere}
+.guide-download-copy span{display:block;margin-top:3px;font-size:10px;color:#897769}
+.full-guide-download{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-height:44px;max-width:100%;padding:11px 15px;border:1px solid #c84208;border-radius:6px;background:#b83b05;color:#fff;text-decoration:none;font-size:12px;font-weight:700;line-height:1.5;text-align:center;word-break:keep-all;overflow-wrap:anywhere;transition:background .15s,border-color .15s}
+.full-guide-download:hover{background:#963004;border-color:#963004;color:#fff}
+.full-guide-download:focus-visible{outline:3px solid #fe5a10;outline-offset:4px}
+.full-guide-download svg{width:17px;height:17px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.material-choice{margin-bottom:19px}
+.material-choice .material-card{margin-bottom:0;border-radius:9px 9px 0 0}
+.material-download{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 25px;background:#fffaf6;border:1px solid #e0d9ce;border-top:0;border-radius:0 0 9px 9px}
+.material-download-label{font-size:11px;color:#827063;line-height:1.7;word-break:keep-all}
+@media(max-width:600px){.guide-download-bar{align-items:stretch;flex-direction:column;gap:12px;padding:15px;margin-bottom:22px}.guide-download-copy strong{font-size:12px}.full-guide-download{width:100%;font-size:12px;min-height:46px;padding:11px 10px}.material-download{align-items:stretch;flex-direction:column;gap:9px;padding:14px 18px}.material-download-label{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.full-guide-download{transition:none}}
+@media print{.guide-download-bar,.material-download{display:none!important}}
